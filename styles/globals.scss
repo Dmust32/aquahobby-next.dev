@@ -1,0 +1,24 @@
+@import "~react-bulma-components/src/index.sass";
+
+// Bulma overides
+html.has-navbar-fixed-top, body.has-navbar-fixed-top {
+  padding-top: 3.80rem !important;
+}
+
+// Global styles
+.is-green {
+  color: rgb(180, 217, 102);
+}
+
+.green-background {
+  background-color: rgb(180, 217, 102);
+}
+
+.is-coral {
+  color: rgb(242, 128, 149);
+}
+
+.coral-background {
+  background-color: rgb(242, 128, 149);
+}
+
