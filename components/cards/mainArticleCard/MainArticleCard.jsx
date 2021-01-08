@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 import Card from 'react-bulma-components/src/components/card';
 import Media from 'react-bulma-components/src/components/media';
 import Image from 'react-bulma-components/src/components/image';
@@ -12,28 +13,33 @@ const MainArticleCard = ({
   title,
   description,
   img,
-  date
+  date,
+  slug,
 }) => {
   return (
     <div className='card-container'>
-      <Card>
-        <Card.Image size="4by3" src={img} />
-        <Card.Content>
-          <Media>
-            <Media.Item renderAs="figure" position="left">
-              <Image size={64} alt="64x64" src={img} />
-            </Media.Item>
-            <Media.Item>
-              <Heading size={4}>{title}</Heading>
-            </Media.Item>
-          </Media>
-          <Content>
-            {description}
-            <br />
-            <div>{date}</div>
-          </Content>
-        </Card.Content>
-      </Card>
+      <Link href={`/articles/${encodeURIComponent(slug)}`}>
+        <a>
+          <Card>
+            <Card.Image size="4by3" src={img} />
+            <Card.Content>
+              <Media>
+                <Media.Item renderAs="figure" position="left">
+                  <Image size={64} alt="64x64" src={img} />
+                </Media.Item>
+                <Media.Item>
+                  <Heading size={4}>{title}</Heading>
+                </Media.Item>
+              </Media>
+              <Content>
+                {description}
+                <br />
+                <div>{date}</div>
+              </Content>
+            </Card.Content>
+          </Card>
+        </a>
+      </Link>
     </div>
   )
 };

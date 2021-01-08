@@ -6,19 +6,27 @@ import './CategorySection.module.scss';
 const renderFeaturedArticles = (articles) => {
 
   return articles.map(({
-    id,
-    title,
-    description,
-    img,
-    date
+    fields: {
+      cardImage: {
+        fields: {
+          file: {
+            url
+          }
+        }
+      },
+      title,
+      description,
+      date,
+      slug,
+    },
   }) => {
     return (
       <MainArticleCard
-        key={id}
-        id={id}
+        key={slug}
+        slug={slug}
         title={title}
         description={description}
-        img={img}
+        img={url}
         date={date}
       />
     );
