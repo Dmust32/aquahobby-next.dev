@@ -1,0 +1,46 @@
+
+      <?xml version="1.0" encoding="UTF-8"?>
+      <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+        
+            <url>
+              <loc>https://aquahobby.dev</loc>
+            </url>
+          
+            <url>
+              <loc>https://aquahobby.dev/articles/[slug]</loc>
+            </url>
+          
+            <url>
+              <loc>https://aquahobby.dev/freshwater-aquariums/aquarium-plants</loc>
+            </url>
+          
+            <url>
+              <loc>https://aquahobby.dev/freshwater-aquariums/directory</loc>
+            </url>
+          
+            <url>
+              <loc>https://aquahobby.dev/freshwater-aquariums/freshwater-equipment</loc>
+            </url>
+          
+            <url>
+              <loc>https://aquahobby.dev/freshwater-aquariums/freshwater-fish</loc>
+            </url>
+          
+            <url>
+              <loc>https://aquahobby.dev/saltwater-aquariums/coral</loc>
+            </url>
+          
+            <url>
+              <loc>https://aquahobby.dev/saltwater-aquariums/directory</loc>
+            </url>
+          
+            <url>
+              <loc>https://aquahobby.dev/saltwater-aquariums/saltwater-equipment</loc>
+            </url>
+          
+            <url>
+              <loc>https://aquahobby.dev/saltwater-aquariums/saltwater-fish</loc>
+            </url>
+          
+      </urlset>
+  
