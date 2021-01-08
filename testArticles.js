@@ -4,58 +4,65 @@ const date = moment().format("YYYY-MM-DD");
 
 const testArticleData = [
   {
-    id: 1,
-    title: 'Test 1',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec iaculis mauris.',
-    img: 'http://bulma.io/images/placeholders/1280x960.png',
-    date
+    fields: {
+      cardImage: {
+        fields: {
+          file: {
+            url: 'http://bulma.io/images/placeholders/1280x960.png'
+          }
+        }
+      },
+      title: 'Test 1',
+      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec iaculis mauris.',
+      date,
+      slug: 'test-slug',
+    },
   },
   {
-    id: 2,
-    title: 'Test 1',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec iaculis mauris.',
-    img: 'http://bulma.io/images/placeholders/1280x960.png',
-    date
+    fields: {
+      cardImage: {
+        fields: {
+          file: {
+            url: 'http://bulma.io/images/placeholders/1280x960.png'
+          }
+        }
+      },
+      title: 'Test 2',
+      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec iaculis mauris.',
+      date,
+      slug: 'test-slug',
+    },
   },
   {
-    id: 3,
-    title: 'Test 1',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec iaculis mauris.',
-    img: 'http://bulma.io/images/placeholders/1280x960.png',
-    date
+    fields: {
+      cardImage: {
+        fields: {
+          file: {
+            url: 'http://bulma.io/images/placeholders/1280x960.png'
+          }
+        }
+      },
+      title: 'Test 3',
+      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec iaculis mauris.',
+      date,
+      slug: 'test-slug',
+    },
   },
   {
-    id: 4,
-    title: 'Test 1',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec iaculis mauris.',
-    img: 'http://bulma.io/images/placeholders/1280x960.png',
-    date
-  },
-  {
-    id: 5,
-    title: 'Test 1',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec iaculis mauris.',
-    img: 'http://bulma.io/images/placeholders/1280x960.png',
-    date
-  }, {
-    id: 6,
-    title: 'Test 1',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec iaculis mauris.',
-    img: 'http://bulma.io/images/placeholders/1280x960.png',
-    date
-  }, {
-    id: 7,
-    title: 'Test 1',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec iaculis mauris.',
-    img: 'http://bulma.io/images/placeholders/1280x960.png',
-    date
-  }, {
-    id: 8,
-    title: 'Test 1',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec iaculis mauris.',
-    img: 'http://bulma.io/images/placeholders/1280x960.png',
-    date
-  },
+    fields: {
+      cardImage: {
+        fields: {
+          file: {
+            url: 'http://bulma.io/images/placeholders/1280x960.png'
+          }
+        }
+      },
+      title: 'Test 4',
+      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec iaculis mauris.',
+      date,
+      slug: 'test-slug',
+    },
+  }
 ];
 
 export default testArticleData;

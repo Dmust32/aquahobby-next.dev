@@ -56,7 +56,7 @@ const Article = ({ article }) => {
         {
           renderNode: {
             [BLOCKS.EMBEDDED_ASSET]: node =>
-              <img src={node.data.target.fields.file.url} />
+              <img src={`https:${node.data.target.fields.file.url}`} />
           }
         }
       )}
