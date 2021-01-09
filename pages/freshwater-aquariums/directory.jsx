@@ -1,3 +1,4 @@
+import Head from 'next/head';
 import CategorySection from '../../components/articleSections/categorySection';
 import testArticleData from '../../testArticles';
 
@@ -27,6 +28,11 @@ const renderSections = () => {
 const FreshwaterDirectory = () => {
   return (
     <div className="freshwater-container">
+      <Head>
+        <title>AquaHobby - Freshwater Aquariums</title>
+        <meta name="description" content="" />
+        <link rel="icon" href="/icon-cut-down.png" size="32x32" />
+      </Head>
       <h1 className="freshwater-header is-green">Freshwater Aquariums</h1>
       {renderSections()}
     </div>
