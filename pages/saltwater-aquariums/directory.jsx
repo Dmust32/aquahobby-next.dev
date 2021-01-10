@@ -1,40 +1,60 @@
 import Head from 'next/head';
 import CategorySection from '../../components/articleSections/categorySection';
-import testArticleData from '../../testArticles';
+import { getArticlesByCategory } from '../../utils/getAtricles';
 
 import "../../styles/SaltwaterDirectory.module.scss";
 
-const sections = [
-  "Equipment",
-  "Saltwater Fish",
-  "Coral"
-];
+const sections = {
+  'Saltwater Equipment': 'saltwater-equipment',
+  'Saltwater Fish': 'saltwater-fish',
+  'Coral': 'coral'
+};
 
-const renderSections = () => {
-  const only4 = testArticleData.slice(0, 4)
+export async function getStaticProps() {
+  const equipment = await getArticlesByCategory(sections['Saltwater Equipment']);
+  const fish = await getArticlesByCategory(sections['Saltwater Fish']);
+  const coral = await getArticlesByCategory(sections['Coral']);
 
-  return sections.map((sectionHeader) => {
+  const articles = {
+    'Saltwater Equipment': equipment,
+    'Saltwater Fish': fish,
+    'Coral': coral,
+  };
+
+  return {
+    props: {
+      articles,
+    },
+  };
+}
+
+const renderSections = (articles) => {
+  return Object.keys(articles).map((sectionHeader) => {
+
     return (
       <CategorySection
         key={sectionHeader}
         sectionTitle={sectionHeader}
-        articles={only4}
+        articles={articles[sectionHeader]}
         headingColor="coral"
       />
     );
   })
 };
 
-const SaltwaterDirectory = () => {
+const SaltwaterDirectory = ({ articles }) => {
   return (
     <div className="saltwater-container">
       <Head>
         <title>AquaHobby - Saltwater Aquariums</title>
-        <meta name="description" content="" />
+        <meta
+          name="description"
+          content="Learn about saltwater aquariums from fish and coral to equipment!"
+        />
         <link rel="icon" href="/icon-cut-down.png" size="32x32" />
       </Head>
       <h1 className="saltwater-header is-coral">Saltwater Aquariums</h1>
-      {renderSections()}
+      {renderSections(articles)}
     </div>
   );
 };

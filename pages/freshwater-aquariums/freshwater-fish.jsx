@@ -1,18 +1,32 @@
 import Head from 'next/head';
 import CategorySection from '../../components/articleSections/categorySection';
-import testArticleData from '../../testArticles';
+import { getArticlesByCategory } from '../../utils/getAtricles';
 
-const FreshwaterFish = () => {
+
+export async function getStaticProps() {
+  const articles = await getArticlesByCategory('freshwater-fish')
+
+  return {
+    props: {
+      articles,
+    },
+  };
+}
+
+const FreshwaterFish = ({ articles }) => {
   return (
     <div>
       <Head>
         <title>AquaHobby - Freshwater Fish</title>
-        <meta name="description" content="" />
+        <meta
+          name="description"
+          content="Freshwater aquarium fish spotlights! Check out some of our favorite fish in the aquarium hobby."
+        />
         <link rel="icon" href="/icon-cut-down.png" size="32x32" />
       </Head>
       <CategorySection
         sectionTitle="Freshwater Fish"
-        articles={testArticleData}
+        articles={articles}
         headingColor="green"
       />
     </div>

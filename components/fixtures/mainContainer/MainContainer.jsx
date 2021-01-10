@@ -22,9 +22,8 @@ const MainContainer = ({ children }) => {
         <Footer>
           <Container>
             <Content style={{ textAlign: 'center' }}>
-              <p>
-                <strong>AquaHobby</strong> established in 2020.
-              </p>
+              <img className="logo" src="/logo-text-cut-down.png" alt="AquaHobby: Your source for all things aquarium" height="40" />
+              established in 2020
             </Content>
           </Container>
         </Footer>
