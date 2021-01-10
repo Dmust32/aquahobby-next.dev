@@ -14,8 +14,8 @@ const Nav = () => {
     >
       <Container>
         <Navbar.Brand>
-          <Navbar.Item className="logo-font" renderAs="a" href="/">
-            <img src="/log-cut-down.png" alt="AquaHobby: Your source for all things aquarium" height="60" />
+          <Navbar.Item renderAs="a" href="/">
+            <img className="logo" src="/log-cut-down.png" alt="AquaHobby: Your source for all things aquarium" height="60" />
           </Navbar.Item>
           <Navbar.Burger
             className={isMobileMenuActive ? 'is-active' : ''}

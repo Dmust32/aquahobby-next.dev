@@ -4,7 +4,6 @@ import MainArticleCard from '../../cards/mainArticleCard';
 import './CategorySection.module.scss';
 
 const renderFeaturedArticles = (articles) => {
-
   return articles.map(({
     fields: {
       cardImage: {
@@ -45,9 +44,12 @@ const CategorySection = ({ sectionTitle, articles, headingColor }) => {
   return (
     <div className="category-container">
       <h1 className={`featured-articles-heading ${getHeadingColor(headingColor)}`}>{sectionTitle}</h1>
-      <div className="featured-articles-container">
-        {renderFeaturedArticles(articles)}
-      </div>
+      {!articles || articles.length === 0 ?
+        <h3>Currently no articles for this category. Please try another!</h3> :
+        <div className="featured-articles-container">
+          {renderFeaturedArticles(articles)}
+        </div>
+      }
     </div>
   );
 };

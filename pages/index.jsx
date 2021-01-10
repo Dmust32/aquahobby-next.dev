@@ -1,33 +1,36 @@
-import { useEffect, useState } from 'react';
 import Head from 'next/head'
 import CategorySection from '../components/articleSections/categorySection';
-import testArticleData from '../testArticles';
 
-export default function LandingPage({ contentClient }) {
-  async function fetchEntries() {
-    const entries = await contentClient.getEntries()
-    if (entries.items) return entries.items
-    console.log(`Error getting Entries for ${contentType.name}.`)
+const contentClient = require('contentful').createClient({
+  space: process.env.NEXT_PUBLIC_CONTENTFUL_SPACE_ID,
+  accessToken: process.env.NEXT_PUBLIC_CONTENTFUL_ACCESS_TOKEN,
+})
+
+export async function getStaticProps() {
+  const entries = await contentClient.getEntries({
+    content_type: 'article',
+  })
+
+  return {
+    props: {
+      articles: entries.items,
+    },
+    revalidate: 3600,
   }
+}
 
-  const [posts, setPosts] = useState([])
+export default function LandingPage({ articles }) {
 
-  useEffect(() => {
-    async function getPosts() {
-      const allPosts = await fetchEntries()
-      setPosts([...allPosts])
-    }
-    getPosts()
-  }, [])
   return (
     <div>
       <Head>
         <title>AquaHobby</title>
+        <meta name="description" content="" />
         <link rel="icon" href="/icon-cut-down.png" size="32x32" />
       </Head>
       <CategorySection
         sectionTitle="Featured Articles"
-        articles={posts}
+        articles={articles}
       />
     </div>
   )
