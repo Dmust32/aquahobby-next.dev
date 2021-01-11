@@ -4,7 +4,7 @@ import { getArticlesByCategory } from '../../utils/getAtricles';
 
 
 export async function getStaticProps() {
-  const articles = await getArticlesByCategory('plants')
+  const articles = await getArticlesByCategory('plants', 12)
 
   return {
     props: {

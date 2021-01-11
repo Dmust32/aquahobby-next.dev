@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import CategorySection from '../components/articleSections/categorySection';
+import Hero from 'react-bulma-components/src/components/hero';
 
 const contentClient = require('contentful').createClient({
   space: process.env.NEXT_PUBLIC_CONTENTFUL_SPACE_ID,
@@ -25,7 +26,10 @@ export default function LandingPage({ articles }) {
     <div>
       <Head>
         <title>AquaHobby</title>
-        <meta name="description" content="" />
+        <meta
+          name="description"
+          content="Your #1 resource for all things aquarium hobby. Freshwater and saltwater aquarium articles to help you navigate this amazing hobby."
+        />
         <link rel="icon" href="/icon-cut-down.png" size="32x32" />
       </Head>
       <CategorySection

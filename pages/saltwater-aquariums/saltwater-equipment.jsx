@@ -3,7 +3,7 @@ import CategorySection from '../../components/articleSections/categorySection';
 import { getArticlesByCategory } from '../../utils/getAtricles';
 
 export async function getStaticProps() {
-  const articles = await getArticlesByCategory('saltwater-equipment')
+  const articles = await getArticlesByCategory('saltwater-equipment', 8)
 
   return {
     props: {

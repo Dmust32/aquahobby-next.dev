@@ -1,10 +1,3 @@
-.hero.is-halfheight .hero-body,
-.hero.is-fullheight .hero-body,
-.hero.is-fullheight-with-navbar
-.hero-body {
-  align-items: flex-start;
-}
-
 .hero-banner {
   position: relative;
   color: white;
@@ -127,18 +120,4 @@
       display: none;
     }
   }
-}
-
-.hero-foot {
-  background-color: #262626;
-  padding: 3rem 1.5rem 6rem;
-  color: white;
-
-  img {
-    height: 40px;
-  }
-}
-
-.main-container-body {
-  padding: 0 1.5rem;
 }

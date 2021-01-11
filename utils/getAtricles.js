@@ -5,10 +5,11 @@ const contentClient = require('contentful').createClient({
   accessToken: process.env.NEXT_PUBLIC_CONTENTFUL_ACCESS_TOKEN,
 })
 
-export const getArticlesByCategory = async (category) => {
+export const getArticlesByCategory = async (category, limit) => {
   const entries = await contentClient.getEntries({
     content_type: 'article',
-    'fields.category': category
+    'fields.category': category,
+    limit: limit ? limit : 20,
   });
 
   return entries.items;
