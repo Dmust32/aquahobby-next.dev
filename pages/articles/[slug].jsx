@@ -1,6 +1,7 @@
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 import { BLOCKS } from '@contentful/rich-text-types';
 import Head from 'next/head'
+import Disclosure from '../../components/fixtures/disclosure';
 
 import '../../styles/Article.module.scss';
 
@@ -51,6 +52,7 @@ const Article = ({ article }) => {
         <link rel="icon" href="/icon-cut-down.png" size="32x32" />
         <meta name="description" content={description} />
       </Head>
+      <Disclosure />
       <h1>{title}</h1>
       {documentToReactComponents(content,
         {

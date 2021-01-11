@@ -11,9 +11,9 @@ const sections = {
 };
 
 export async function getStaticProps() {
-  const equipment = await getArticlesByCategory(sections['Saltwater Equipment']);
-  const fish = await getArticlesByCategory(sections['Saltwater Fish']);
-  const coral = await getArticlesByCategory(sections['Coral']);
+  const equipment = await getArticlesByCategory(sections['Saltwater Equipment'], 8);
+  const fish = await getArticlesByCategory(sections['Saltwater Fish'], 8);
+  const coral = await getArticlesByCategory(sections['Coral'], 8);
 
   const articles = {
     'Saltwater Equipment': equipment,
