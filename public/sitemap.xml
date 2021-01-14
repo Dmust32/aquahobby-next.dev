@@ -39,9 +39,13 @@
               </url>
             
         
-            <url>
+              <url>
+                <loc>https://aquahobby.dev/articles/test-article-number-two</loc>
+              </url>
+            
+              <url>
                 <loc>https://aquahobby.dev/articles/test-article</loc>
-            </url>
-                
+              </url>
+                  
       </urlset>
   

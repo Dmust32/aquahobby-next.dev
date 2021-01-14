@@ -1,4 +1,5 @@
 import Hero from 'react-bulma-components/src/components/hero';
+import './HeroBanner.module.scss';
 
 const HeroBanner = () => {
   return (

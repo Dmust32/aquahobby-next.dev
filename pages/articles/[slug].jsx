@@ -2,6 +2,7 @@ import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 import { BLOCKS } from '@contentful/rich-text-types';
 import Head from 'next/head'
 import Disclosure from '../../components/fixtures/disclosure';
+import ProductCard from '../../components/cards/productCard';
 
 import '../../styles/Article.module.scss';
 
@@ -54,6 +55,9 @@ const Article = ({ article }) => {
       </Head>
       <Disclosure />
       <h1>{title}</h1>
+      <ProductCard
+        badgeText="Top Pick"
+      />
       {documentToReactComponents(content,
         {
           renderNode: {
