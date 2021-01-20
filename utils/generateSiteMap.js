@@ -42,7 +42,7 @@ async function generateSiteMap() {
     return (
       `
               <url>
-                <loc>${`https://aquahobby.dev/articles/${article.fields.slug}`}</loc>
+                <loc>${`https://aquahobby.dev/articles/${article.sys.contentType.sys.id}/${article.fields.slug}`}</loc>
               </url>
             `
     );

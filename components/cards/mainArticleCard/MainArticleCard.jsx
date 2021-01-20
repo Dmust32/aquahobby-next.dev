@@ -15,10 +15,11 @@ const MainArticleCard = ({
   img,
   date,
   slug,
+  contentType,
 }) => {
   return (
     <div className='card-container'>
-      <Link href={`/articles/${encodeURIComponent(slug)}`}>
+      <Link href={`/articles/${encodeURIComponent(contentType)}/${encodeURIComponent(slug)}`}>
         <a>
           <Card>
             <Card.Image size="4by3" src={img} />

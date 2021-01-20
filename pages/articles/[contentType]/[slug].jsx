@@ -1,25 +1,20 @@
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 import { BLOCKS } from '@contentful/rich-text-types';
 import Head from 'next/head'
-import Disclosure from '../../components/fixtures/disclosure';
-import ProductCard from '../../components/cards/productCard';
+import Disclosure from '../../../components/fixtures/disclosure';
+import { getAllArticles, getArticleBySlug } from '../../../utils/getAtricles';
 
-import '../../styles/Article.module.scss';
-
-const contentClient = require('contentful').createClient({
-  space: process.env.NEXT_PUBLIC_CONTENTFUL_SPACE_ID,
-  accessToken: process.env.NEXT_PUBLIC_CONTENTFUL_ACCESS_TOKEN,
-})
+import '../../../styles/Article.module.scss';
 
 export async function getStaticPaths() {
-  const entries = await contentClient.getEntries({
-    content_type: 'article',
-  });
-
+  const entries = await getAllArticles();
   return {
-    paths: entries.items.map((article) => {
+    paths: entries.map((article) => {
       return {
-        params: { slug: article.fields.slug }
+        params: {
+          slug: article.fields.slug,
+          contentType: article.sys.contentType.sys.id,
+        },
       }
     }),
     fallback: false,
@@ -27,24 +22,22 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }) {
-  const entries = await contentClient.getEntries({
-    content_type: 'article',
-    'fields.slug': params.slug
-  });
+  const { slug, contentType } = params;
+  const article = await getArticleBySlug(slug, contentType);
 
   return {
     props: {
-      article: entries.items[0],
+      article,
+      contentType,
     },
   };
 }
 
-const Article = ({ article }) => {
+const Article = ({ article, contentType }) => {
   const {
     title,
     content,
     description,
-    productCardLink,
   } = article.fields;
 
   return (
@@ -55,11 +48,6 @@ const Article = ({ article }) => {
         <meta name="description" content={description} />
       </Head>
       <Disclosure />
-      <h1>{title}</h1>
-      <ProductCard
-        badgeText="Top Pick"
-        productCardData={productCardLink}
-      />
       {documentToReactComponents(content,
         {
           renderNode: {

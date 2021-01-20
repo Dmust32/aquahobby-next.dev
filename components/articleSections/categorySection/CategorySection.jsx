@@ -5,6 +5,10 @@ import './CategorySection.module.scss';
 
 const renderFeaturedArticles = (articles) => {
   return articles.map(({
+    sys: {
+      // Grab type with contentType.sys.id
+      contentType
+    },
     fields: {
       cardImage: {
         fields: {
@@ -27,6 +31,7 @@ const renderFeaturedArticles = (articles) => {
         description={description}
         img={url}
         date={date}
+        contentType={contentType.sys.id}
       />
     );
   })

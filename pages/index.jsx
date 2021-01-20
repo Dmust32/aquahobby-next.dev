@@ -1,20 +1,13 @@
 import Head from 'next/head'
 import CategorySection from '../components/articleSections/categorySection';
-import Hero from 'react-bulma-components/src/components/hero';
-
-const contentClient = require('contentful').createClient({
-  space: process.env.NEXT_PUBLIC_CONTENTFUL_SPACE_ID,
-  accessToken: process.env.NEXT_PUBLIC_CONTENTFUL_ACCESS_TOKEN,
-})
+import { getAllArticles } from '../utils/getAtricles';
 
 export async function getStaticProps() {
-  const entries = await contentClient.getEntries({
-    content_type: 'article',
-  })
+  const articles = await getAllArticles();
 
   return {
     props: {
-      articles: entries.items,
+      articles,
     },
     revalidate: 3600,
   }

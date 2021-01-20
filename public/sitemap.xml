@@ -40,11 +40,11 @@
             
         
               <url>
-                <loc>https://aquahobby.dev/articles/test-article-number-two</loc>
+                <loc>https://aquahobby.dev/articles/article/test-article-number-two</loc>
               </url>
             
               <url>
-                <loc>https://aquahobby.dev/articles/test-article</loc>
+                <loc>https://aquahobby.dev/articles/article/test-article</loc>
               </url>
                   
       </urlset>
