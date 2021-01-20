@@ -1,27 +1,66 @@
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCheck } from '@fortawesome/free-solid-svg-icons'
 import CtaButton from '../../buttons/ctaButton';
 
 import './ProductCard.module.scss';
 
-const renderBullets = () => {
+const renderBullets = (type, bullets) => {
   return (
-    <h1>Im a bullet</h1>
-  );
-}
+    <ul>
+      {
+        bullets.map((bullet) => {
+          return (
+            <li key={bullet} className={type === 'cons' ? 'cons' : 'pros'}>
+              <FontAwesomeIcon icon={faCheck} />
+              {bullet}
+            </li>
+          )
+        })
+      }
+    </ul>
+  )
+};
 
-const ProductCard = ({ badgeText }) => {
+
+const ProductCard = ({ badgeText, productCardData }) => {
+  const {
+    affiliateLink,
+    cons,
+    pros,
+    productImage: {
+      fields: {
+        file: {
+          url
+        }
+      }
+    },
+    productName
+  } = productCardData.fields;
+
   return (
     <div className="product-card-container">
       <div className="badge">{badgeText}</div>
-      <img src="/icon-cut-down.png" />
+      <h1 className="product-title">{productName}</h1>
+      <img src={url} />
       <div className="bullets-container">
-        {renderBullets()}
+        <div className="pros-cons">
+          <div className="pros-container">
+            <h1>Pros</h1>
+            {renderBullets("pros", pros)}
+          </div>
+          <div className="cons-container">
+            <h1>Cons</h1>
+            {renderBullets("cons", cons)}
+          </div>
+        </div>
+        <CtaButton
+          buttonColor="warning"
+          size="medium"
+          affiliateLink={affiliateLink}
+        >
+          Buy on Amazon
+        </CtaButton>
       </div>
-      <CtaButton
-        buttonColor="warning"
-        size="medium"
-      >
-        Buy on Amazon
-      </CtaButton>
     </div>
   )
 }

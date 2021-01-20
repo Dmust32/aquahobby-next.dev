@@ -43,7 +43,8 @@ const Article = ({ article }) => {
   const {
     title,
     content,
-    description
+    description,
+    productCardLink,
   } = article.fields;
 
   return (
@@ -57,6 +58,7 @@ const Article = ({ article }) => {
       <h1>{title}</h1>
       <ProductCard
         badgeText="Top Pick"
+        productCardData={productCardLink}
       />
       {documentToReactComponents(content,
         {

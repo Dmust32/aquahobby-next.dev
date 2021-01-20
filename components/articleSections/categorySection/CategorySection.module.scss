@@ -9,6 +9,10 @@
   flex-wrap: wrap;
   align-items: center;
   justify-content: flex-start;
+
+  @media screen and (max-width: 687px) {
+    justify-content: center;
+  }
 }
 
 .category-container {

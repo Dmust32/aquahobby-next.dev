@@ -1,4 +1,6 @@
 import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCopyright } from '@fortawesome/free-regular-svg-icons'
 import Hero from 'react-bulma-components/src/components/hero';
 import Container from 'react-bulma-components/src/components/container';
 import Content from 'react-bulma-components/src/components/container';
@@ -34,9 +36,11 @@ const MainContainer = ({ children }) => {
       <Hero.Footer>
         <Footer>
           <Container>
-            <Content style={{ textAlign: 'center' }}>
+            <Content className="content" style={{ textAlign: 'center' }}>
               <img className="logo" src="/logo-text-cut-down.png" alt="AquaHobby: Your source for all things aquarium" height="40" />
-              Copywright text in 2020
+              <div>
+                Copyright <FontAwesomeIcon icon={faCopyright} /> text in 2020
+              </div>
             </Content>
           </Container>
         </Footer>

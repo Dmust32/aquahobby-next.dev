@@ -10,8 +10,27 @@
   padding: 3rem 1.5rem 6rem;
   color: white;
 
-  img {
-    height: 40px;
+  .content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img {
+      height: 40px;
+    }
+  
+    svg {
+      height: 12px;
+    }
+  }
+
+  
+
+  @media screen and (max-width: 473px) {
+    .content {
+      flex-direction: column;
+      justify-content: center;
+    }
   }
 }
 

@@ -1,14 +1,23 @@
 .product-card-container {
   position: relative;
-  height: 400px;
+  min-height: 400px;
   width: 100%;
   max-width: 700px;
   border: 3px solid #A4A5A6;
   border-radius: 6px;
   display: flex;
 
+  .product-title {
+    position: absolute;
+    top: 5px;
+    left: 10px;
+  }
+
   img {
-    height: 80%;
+    height: 300px;
+    width: 250px;
+    margin-top: 70px;
+    margin-left: 10px;
   }
 
   .badge {
@@ -19,12 +28,78 @@
     top: -20px;
     right: 50px;
     height: 40px;
-    width: 100px;
+    min-width: 100px;
+    padding: 10px;
     background-color: rgb(180, 217, 102);
-    // color: #f2f2f2;
     font-size: 18px;
+    font-weight: 600;
     border-radius: 4px;
-    border: 3px solid #A4A5A6;
+  }
+
+  .bullets-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+
+    .pros-cons {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+
+      .pros-container {
+        width: 70%;
+      }
+      .cons-container {
+        width: 70%;
+      }
+    }
+
+    li {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      justify-content: left;
+
+      ul {
+        width: 100%;
+      }
+
+      svg {
+        margin-right: 10px;
+        height: 20px;
+      }
+    }
+
+    .pros {
+      svg {
+        color:rgb(180, 217, 102);
+      }
+    }
+    .cons {
+      svg {
+        color:#BF1F2C;
+      }
+    }
+  }
+
+  @media screen and (max-width: 557px) {
+    flex-direction: column;
+    align-items: center;
+
+    img {
+      margin-left: 0;
+    }
+
+    .bullets-container {
+      height: 300px
+    }
+
+    .product-title {
+      margin-top: 10px;
+    }
   }
 
 }

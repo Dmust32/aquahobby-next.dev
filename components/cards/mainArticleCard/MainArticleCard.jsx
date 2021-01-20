@@ -24,9 +24,6 @@ const MainArticleCard = ({
             <Card.Image size="4by3" src={img} />
             <Card.Content>
               <Media>
-                <Media.Item renderAs="figure" position="left">
-                  <Image size={64} alt="64x64" src={img} />
-                </Media.Item>
                 <Media.Item>
                   <Heading size={4}>{title}</Heading>
                 </Media.Item>
