@@ -41,6 +41,7 @@ const MainContainer = ({ children }) => {
               <div>
                 Copyright <FontAwesomeIcon icon={faCopyright} /> text in 2020
               </div>
+              <a href='/sitemap.xml'>Sitemap</a>
             </Content>
           </Container>
         </Footer>

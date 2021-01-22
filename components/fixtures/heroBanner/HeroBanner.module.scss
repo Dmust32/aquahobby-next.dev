@@ -2,9 +2,9 @@
   position: relative;
   color: white;
   background-color: #F2C166;
-  height: 400px;
+  height: 500px;
   padding: 20px 0;
-  clip-path: polygon(0 0, 100% 0, 100% 89%, 0 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
 
   .hero-title {
     display: flex;
@@ -27,7 +27,7 @@
 
   h3 {
     position: absolute;
-    bottom: 20%;
+    bottom: 25%;
     right: 10%;
     font-size: 24px;
     font-weight: 500;
@@ -130,7 +130,7 @@
     }
     h3 {
       left: 10%;
-      bottom: 10%
+      bottom: 20%
     }
   }
 }

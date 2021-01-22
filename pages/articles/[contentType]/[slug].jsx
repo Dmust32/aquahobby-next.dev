@@ -1,7 +1,6 @@
-import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
-import { BLOCKS } from '@contentful/rich-text-types';
 import Head from 'next/head'
 import Disclosure from '../../../components/fixtures/disclosure';
+import templateMap from '../../../components/articleTemplates';
 import { getAllArticles, getArticleBySlug } from '../../../utils/getAtricles';
 
 import '../../../styles/Article.module.scss';
@@ -36,9 +35,9 @@ export async function getStaticProps({ params }) {
 const Article = ({ article, contentType }) => {
   const {
     title,
-    content,
     description,
   } = article.fields;
+  const Template = templateMap[contentType];
 
   return (
     <div className="article-container">
@@ -48,14 +47,9 @@ const Article = ({ article, contentType }) => {
         <meta name="description" content={description} />
       </Head>
       <Disclosure />
-      {documentToReactComponents(content,
-        {
-          renderNode: {
-            [BLOCKS.EMBEDDED_ASSET]: node =>
-              <img src={`https:${node.data.target.fields.file.url}`} />
-          }
-        }
-      )}
+      <Template
+        article={article}
+      />
     </div>
   )
 };
