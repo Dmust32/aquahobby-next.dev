@@ -46,7 +46,7 @@ const SaltwaterDirectory = ({ articles }) => {
   return (
     <div className="saltwater-container">
       <Head>
-        <title>AquaHobby - Saltwater Aquariums</title>
+        <title>H2Know - Saltwater Aquariums</title>
         <meta
           name="description"
           content="Learn about saltwater aquariums from fish and coral to equipment!"

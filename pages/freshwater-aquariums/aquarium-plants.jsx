@@ -17,7 +17,7 @@ const Plants = ({ articles }) => {
   return (
     <div>
       <Head>
-        <title>AquaHobby - Aquarium Plants</title>
+        <title>H2Know - Aquarium Plants</title>
         <meta
           name="description"
           content="Aquatic/ aquarium plants. Learn how to care for them and which ones go best in your tank!"

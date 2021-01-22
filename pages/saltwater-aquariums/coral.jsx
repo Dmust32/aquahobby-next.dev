@@ -16,7 +16,7 @@ const Coral = ({ articles }) => {
   return (
     <div>
       <Head>
-        <title>AquaHobby - Saltwater Coral</title>
+        <title>H2Know - Saltwater Coral</title>
         <meta
           name="description"
           content="Ever wanted a coral reef in your home? Here you can learn about how to keep a coral reef aquarium!"

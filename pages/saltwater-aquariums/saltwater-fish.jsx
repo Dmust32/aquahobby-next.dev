@@ -16,7 +16,7 @@ const SaltwaterFish = ({ articles }) => {
   return (
     <div>
       <Head>
-        <title>AquaHobby - Saltwater Fish</title>
+        <title>H2Know - Saltwater Fish</title>
         <meta
           name="description"
           content="Want to keep saltwater fish? Discover the beautiful fish that make up the saltwater aquarium hobby."

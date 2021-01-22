@@ -37,7 +37,7 @@ const MainContainer = ({ children }) => {
         <Footer>
           <Container>
             <Content className="content" style={{ textAlign: 'center' }}>
-              <img className="logo" src="/logo-text-cut-down.png" alt="AquaHobby: Your source for all things aquarium" height="40" />
+              <img className="logo" src="/h2know.svg" alt="H2know: Your source for all things aquarium" height="40" />
               <div>
                 Copyright <FontAwesomeIcon icon={faCopyright} /> text in 2020
               </div>

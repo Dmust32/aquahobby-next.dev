@@ -15,7 +15,7 @@ const Nav = () => {
       <Container>
         <Navbar.Brand>
           <Navbar.Item renderAs="a" href="/">
-            <img className="logo" src="/log-cut-down.png" alt="AquaHobby: Your source for all things aquarium" height="60" />
+            <img className="logo" src="/h2know.svg" alt="H2Know: Your source for all things aquarium" height="60" />
           </Navbar.Item>
           <Navbar.Burger
             className={isMobileMenuActive ? 'is-active' : ''}

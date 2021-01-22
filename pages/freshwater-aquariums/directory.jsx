@@ -46,7 +46,7 @@ const FreshwaterDirectory = ({ articles }) => {
   return (
     <div className="freshwater-container">
       <Head>
-        <title>AquaHobby - Freshwater Aquariums</title>
+        <title>H2Know - Freshwater Aquariums</title>
         <meta
           name="description"
           content="Learn about freshwater aquarium keeping. Fish, plants or equipment? We have you covered."

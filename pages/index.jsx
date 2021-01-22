@@ -18,7 +18,7 @@ export default function LandingPage({ articles }) {
   return (
     <div>
       <Head>
-        <title>AquaHobby</title>
+        <title>H2Know</title>
         <meta
           name="description"
           content="Your #1 resource for all things aquarium hobby. Freshwater and saltwater aquarium articles to help you navigate this amazing hobby."

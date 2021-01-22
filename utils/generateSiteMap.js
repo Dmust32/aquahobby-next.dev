@@ -52,7 +52,7 @@ async function generateSiteMap() {
       const route = path === '/index' ? '' : path
       return (
         `<url>
-          <loc>${`https://aquahobby.dev${route}`}</loc>
+          <loc>${`https://h2know.dev${route}`}</loc>
         </url>`
       )
     }).join('')
@@ -60,7 +60,7 @@ async function generateSiteMap() {
     ${articles.map((article) => {
       return (
         `<url>
-        <loc>${`https://aquahobby.dev/articles/${article.sys.contentType.sys.id}/${article.fields.slug}`}</loc>
+        <loc>${`https://h2know.dev/articles/${article.sys.contentType.sys.id}/${article.fields.slug}`}</loc>
       </url>`
       );
     }).join('')}      

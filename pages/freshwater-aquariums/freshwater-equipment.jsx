@@ -18,7 +18,7 @@ const FreshwaterEquipment = ({ articles }) => {
   return (
     <div>
       <Head>
-        <title>AquaHobby - Freshwater Equipment</title>
+        <title>H2Know - Freshwater Equipment</title>
         <meta
           name="description"
           content="What equipment do you need for your freshwater aquarium? Come find out!"

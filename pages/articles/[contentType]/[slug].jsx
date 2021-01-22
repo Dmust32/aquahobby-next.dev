@@ -42,7 +42,7 @@ const Article = ({ article, contentType }) => {
   return (
     <div className="article-container">
       <Head>
-        <title>AquaHobby - {title}</title>
+        <title>H2Know - {title}</title>
         <link rel="icon" href="/icon-cut-down.png" size="32x32" />
         <meta name="description" content={description} />
       </Head>
