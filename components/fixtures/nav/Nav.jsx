@@ -27,7 +27,6 @@ const Nav = () => {
             <Navbar.Item
               dropdown
               hoverable
-
             >
               <Navbar.Link
                 arrowless={true}
@@ -71,6 +70,30 @@ const Nav = () => {
                 <Navbar.Item href="/saltwater-aquariums/coral">
                   Coral
                 </Navbar.Item>
+              </Navbar.Dropdown>
+            </Navbar.Item>
+            <Navbar.Item
+              dropdown
+              hoverable
+            >
+              <Navbar.Link
+                arrowless={true}
+                className="menu-font"
+                renderAs="a"
+                href="/tools/directory"
+              >
+                Tools
+              </Navbar.Link>
+              <Navbar.Dropdown>
+                <Navbar.Item href="/tools/substrate-calculator">
+                  Substrate Calculator
+                </Navbar.Item>
+                <Navbar.Item href="/tools/aquarium-volume-calculator">
+                  Aquarium Volume Calculator
+                </Navbar.Item>
+                {/* <Navbar.Item href="/freshwater-aquariums/aquarium-plants">
+                  Coral Par Requirement char
+                </Navbar.Item> */}
               </Navbar.Dropdown>
             </Navbar.Item>
           </Navbar.Container>
