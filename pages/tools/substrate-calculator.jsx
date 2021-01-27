@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Head from 'next/head';
 import { Field, Select, Label, Input } from 'react-bulma-components/lib/components/form'
-import substrateContent from './substrateContent';
+import substrateContent from '../../content/substrateContent';
 
 import '../../styles/Calculator.module.scss';
 
