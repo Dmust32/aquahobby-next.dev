@@ -39,7 +39,7 @@ const MainContainer = ({ children }) => {
             <Content className="content" style={{ textAlign: 'center' }}>
               <img className="logo" src="/h2know.svg" alt="H2know: Your source for all things aquarium" height="40" />
               <div>
-                Copyright <FontAwesomeIcon icon={faCopyright} /> text in 2020
+                Copyright <FontAwesomeIcon icon={faCopyright} /> text in 2021
               </div>
               <a href='/sitemap.xml'>Sitemap</a>
             </Content>

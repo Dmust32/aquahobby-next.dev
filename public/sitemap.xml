@@ -18,13 +18,13 @@
           <loc>https://h2know.dev/saltwater-aquariums/saltwater-equipment</loc>
         </url><url>
           <loc>https://h2know.dev/saltwater-aquariums/saltwater-fish</loc>
+        </url><url>
+          <loc>https://h2know.dev/tools/aquarium-volume-calculator</loc>
+        </url><url>
+          <loc>https://h2know.dev/tools/substrate-calculator</loc>
         </url>
     <url>
-        <loc>https://h2know.dev/articles/howToArticle/how-to-test</loc>
-      </url><url>
-        <loc>https://h2know.dev/articles/article/test-article</loc>
-      </url><url>
-        <loc>https://h2know.dev/articles/article/test-article-number-two</loc>
+        <loc>https://h2know.dev/articles/article/beginners-guide-to-keeping-discus</loc>
       </url>      
     </urlset>
   

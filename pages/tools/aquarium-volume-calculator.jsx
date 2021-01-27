@@ -1,10 +1,10 @@
 import Head from 'next/head';
 
-import '../../styles/AquariumVolumeCalculator.module.scss';
+import '../../styles/Calculator.module.scss';
 
 const AquariumVolumeCalculator = ({ articles }) => {
   return (
-    <div>
+    <div className="calculator-conatiner">
       <Head>
         <title>H2Know - Aquarium Volume Calculator</title>
         <meta
@@ -13,7 +13,7 @@ const AquariumVolumeCalculator = ({ articles }) => {
         />
         <link rel="icon" href="/icon-cut-down.png" size="32x32" />
       </Head>
-      <div>
+      <div className="calculator-body">
         Calculate some stuff!!!
       </div>
     </div>
