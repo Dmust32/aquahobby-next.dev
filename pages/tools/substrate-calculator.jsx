@@ -76,15 +76,15 @@ const SubstrateCalculator = () => {
             </Field>
             <Field>
               <Label>Tank Width</Label>
-              <Input value={tankWidth} onChange={(e) => setTankWidth(e.target.value)} />
+              <Input placeholder="inches" value={tankWidth} onChange={(e) => setTankWidth(e.target.value)} />
             </Field>
             <Field>
               <Label>Tank Length</Label>
-              <Input value={tankLength} onChange={(e) => setTankLength(e.target.value)} />
+              <Input placeholder="inches" value={tankLength} onChange={(e) => setTankLength(e.target.value)} />
             </Field>
             <Field>
               <Label>Desired Substrate Depth</Label>
-              <Input value={substrateDepth} onChange={(e) => setSubstrateDepth(e.target.value)} />
+              <Input placeholder="inches" value={substrateDepth} onChange={(e) => setSubstrateDepth(e.target.value)} />
             </Field>
           </div>
           <div className="result">

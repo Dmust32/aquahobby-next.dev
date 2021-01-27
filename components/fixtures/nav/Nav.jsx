@@ -79,8 +79,6 @@ const Nav = () => {
               <Navbar.Link
                 arrowless={true}
                 className="menu-font"
-                renderAs="a"
-                href="/tools/directory"
               >
                 Tools
               </Navbar.Link>
