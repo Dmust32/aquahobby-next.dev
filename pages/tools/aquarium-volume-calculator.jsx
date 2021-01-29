@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Head from 'next/head';
-import { Field, Select, Label, Input } from 'react-bulma-components/lib/components/form'
+import { Field, Label, Input } from 'react-bulma-components/lib/components/form'
 
 import '../../styles/Calculator.module.scss';
 

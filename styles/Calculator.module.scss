@@ -54,6 +54,33 @@
       p {
         margin-top: 10px;
       }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 0 20px rgba(0,0,0,0.1);
+      }
+      
+      th,
+      td {
+        padding: 15px;
+      }
+      
+      th {
+        text-align: left;
+        color: white;
+      }
+      
+      th {
+        background-color: #5E66F2;
+      }
+      
+      .no-tanks {
+        td {
+          text-align: center;
+        }
+      }
     }
 
     @media screen and (max-width: 816px) {

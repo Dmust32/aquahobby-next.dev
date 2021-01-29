@@ -89,8 +89,11 @@ const Nav = () => {
                 <Navbar.Item href="/tools/aquarium-volume-calculator">
                   Aquarium Volume Calculator
                 </Navbar.Item>
-                {/* <Navbar.Item href="/freshwater-aquariums/aquarium-plants">
-                  Coral Par Requirement char
+                <Navbar.Item href="/tools/tank-options-calculator">
+                  Tank Options Calculator
+                </Navbar.Item>
+                {/* <Navbar.Item href="/tools/coral-par-chart">
+                  Coral Par Requirement chart
                 </Navbar.Item> */}
               </Navbar.Dropdown>
             </Navbar.Item>
