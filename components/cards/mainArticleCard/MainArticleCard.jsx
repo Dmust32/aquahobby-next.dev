@@ -2,7 +2,6 @@ import React from 'react';
 import Link from 'next/link';
 import Card from 'react-bulma-components/src/components/card';
 import Media from 'react-bulma-components/src/components/media';
-import Image from 'react-bulma-components/src/components/image';
 import Content from 'react-bulma-components/src/components/content';
 import Heading from 'react-bulma-components/src/components/heading';
 
