@@ -24,6 +24,7 @@ const getToolCards = () => {
         title={title}
         content={content}
         toolSlug={toolSlug}
+        key={title}
       />
     );
   })

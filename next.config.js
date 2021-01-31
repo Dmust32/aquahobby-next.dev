@@ -11,4 +11,7 @@ module.exports = withTM(withSass({
     }
     return config
   },
+  images: {
+    domains: ['images.ctfassets.net']
+  }
 }));

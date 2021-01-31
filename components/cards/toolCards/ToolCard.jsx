@@ -6,7 +6,7 @@ const ToolCard = ({ img, title, content, toolSlug }) => {
   return (
     <Link href={`/tools/${toolSlug}`}>
       <div className="tool-card-container">
-        <img src={img} alt={title} />
+        <img src={img} alt={title} width={130} height={130} />
         <div>
           <h3>{title}</h3>
           {content()}

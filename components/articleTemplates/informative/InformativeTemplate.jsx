@@ -1,8 +1,7 @@
-import React from 'react'
-import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
-import { BLOCKS, INLINES } from '@contentful/rich-text-types';
+import React from 'react';
+import contentToReact from '../../../utils/contentToReact';
 
-import './InformativeTemplate.module.scss'
+import './InformativeTemplate.module.scss';
 
 const InformativeTemplate = ({ article: { fields: { title, content, aboutSection } } }) => {
   return (
@@ -10,42 +9,11 @@ const InformativeTemplate = ({ article: { fields: { title, content, aboutSection
       <h1 id="title">{title}</h1>
       <div className="about-section">
         {aboutSection &&
-          documentToReactComponents(aboutSection,
-            {
-              renderNode: {
-                [BLOCKS.EMBEDDED_ASSET]: node => {
-                  return (
-                    <img
-                      alt={node.data.target.fields.file.description}
-                      src={`https:${node.data.target.fields.file.url}`}
-                    />
-                  )
-                },
-              }
-            }
-          )
+          contentToReact(aboutSection)
         }
       </div>
       <div className="content-body">
-        {documentToReactComponents(content,
-          {
-            renderNode: {
-              [BLOCKS.EMBEDDED_ASSET]: node => {
-                return (
-                  <img
-                    alt={node.data.target.fields.file.description}
-                    src={`https:${node.data.target.fields.file.url}`}
-                  />
-                );
-              },
-              [INLINES.HYPERLINK]: node => {
-                return (
-                  <a href={node.data.uri} target="_blank" >{node.content[0].value}</a>
-                );
-              }
-            }
-          }
-        )}
+        {contentToReact(content)}
       </div>
     </>
   )
