@@ -9,17 +9,6 @@ const HeroBanner = () => {
         <h4>Your aquarium journey starts here!</h4>
       </div>
       <h3>"To know Mother Nature, is to love her smallest creations" - Takashi Amano</h3>
-      <div className="bubbles">
-        <figure className="big-bubble">
-          <figure className="highlight" />
-        </figure>
-        <figure className="med-bubble">
-          <figure className="highlight" />
-        </figure>
-        <figure className="little-bubble">
-          <figure className="highlight" />
-        </figure>
-      </div>
     </Hero>
   )
 }

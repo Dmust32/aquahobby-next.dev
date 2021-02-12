@@ -22,26 +22,21 @@ const renderBullets = (type, bullets) => {
 };
 
 
-const ProductCard = ({ badgeText, productCardData }) => {
+const ProductCard = ({ productCardData }) => {
   const {
-    affiliateLink,
+    link,
     cons,
     pros,
-    productImage: {
-      fields: {
-        file: {
-          url
-        }
-      }
-    },
-    productName
-  } = productCardData.fields;
+    img,
+    title,
+    tag
+  } = productCardData;
 
   return (
     <div className="product-card-container">
-      <div className="badge">{badgeText}</div>
-      <h1 className="product-title">{productName}</h1>
-      <img src={url} />
+      <div className="badge">{tag}</div>
+      <h1 className="product-title">{title}</h1>
+      <img src={img} />
       <div className="bullets-container">
         <div className="pros-cons">
           <div className="pros-container">
@@ -56,7 +51,7 @@ const ProductCard = ({ badgeText, productCardData }) => {
         <CtaButton
           buttonColor="warning"
           size="medium"
-          affiliateLink={affiliateLink}
+          affiliateLink={link}
         >
           Buy on Amazon
         </CtaButton>

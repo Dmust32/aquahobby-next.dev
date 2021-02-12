@@ -1,10 +1,9 @@
 .hero-banner {
   position: relative;
   color: white;
-  background-color: #F2C166;
   height: 500px;
   padding: 20px 0;
-  clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+  background-image: url("/hero.png");
 
   .hero-title {
     display: flex;
@@ -16,12 +15,10 @@
 
     h1 {
       font-size: 45px;
-      // font-weight: 600;
     }
 
     h4 {
       font-size: 20px;
-      // font-weight: 500;
     }
   }
 
@@ -31,64 +28,6 @@
     right: 10%;
     font-size: 24px;
     font-weight: 500;
-  }
-
-  .bubbles {
-    position: absolute;
-    right: 10%;
-    top: 10%;
-    height: 200px;
-    width: 200px;
-
-    .highlight {
-      border-radius: 50%;
-      border: 1px solid white;
-      background-color: white;
-      position: absolute;
-      top: 10%;
-      left: 15%
-    }
-
-    .big-bubble {
-      position: absolute;
-      bottom: 0;
-      right: 10%;
-      border-radius: 50%;
-      background-color: #5E66F2;
-      background: radial-gradient(circle at 100px 100px, white, #5E66F2);
-      height: 40px;
-      width: 40px;
-
-      .highlight {
-        height: 8px;
-        width: 8px
-      }
-    }
-    .med-bubble {
-      position: absolute;
-      bottom: 30%;
-      right: 30%;
-      border-radius: 50%;
-      background-color: #5E66F2;
-      background: radial-gradient(circle at 100px 100px, white, #5E66F2);
-      height: 20px;
-      width: 20px;
-
-      .highlight {
-        height: 5px;
-        width: 5px
-      }
-    }
-    .little-bubble {
-      position: absolute;
-      bottom: 50%;
-      right: 10%;
-      border-radius: 50%;
-      background-color: #5E66F2;
-      background: radial-gradient(circle at 100px 100px, white, #5E66F2);
-      height: 10px;
-      width: 10px;
-    }
   }
 
   @media screen and (max-width: 1440px) {
@@ -116,7 +55,7 @@
 
     h3 {
       left: 10%;
-      bottom: 20%
+      bottom: 25%
     }
 
     .bubbles {
@@ -130,7 +69,7 @@
     }
     h3 {
       left: 10%;
-      bottom: 20%
+      bottom: 25%
     }
   }
 }

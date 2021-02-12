@@ -14,13 +14,23 @@
         border-radius: 6px 6px 0 0;
       }
     }
-    
-    .content {
-      div {
-        position: absolute;
-        bottom: 10px;
+
+    .card-content {
+      min-height: 222px;
+
+      article {
+        min-height: 55px;
+      }
+  
+      .content {
+        div {
+          position: absolute;
+          bottom: 10px;
+        }
       }
     }
+    
+    
   }
 
   @media screen and (max-width: 369px) {

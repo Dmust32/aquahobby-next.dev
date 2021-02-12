@@ -48,7 +48,7 @@ const Nav = () => {
                 </Navbar.Item>
               </Navbar.Dropdown>
             </Navbar.Item>
-            <Navbar.Item
+            {/* <Navbar.Item
               dropdown
               hoverable
             >
@@ -71,7 +71,7 @@ const Nav = () => {
                   Coral
                 </Navbar.Item>
               </Navbar.Dropdown>
-            </Navbar.Item>
+            </Navbar.Item> */}
             <Navbar.Item
               dropdown
               hoverable

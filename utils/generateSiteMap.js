@@ -33,11 +33,12 @@ async function generateSiteMap() {
   const pages = await globby([
     'pages/**/*.js',
     'pages/**/*.jsx',
+    'posts/*.md',
+    '!pages/saltwater-aquariums/**',
     '!pages/_*.js',
     '!pages/_*.jsx',
     '!pages/**/[slug].jsx',
     '!pages/api',
-    'posts/*.md'
   ])
 
   const sitemap =
