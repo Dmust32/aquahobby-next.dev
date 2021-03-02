@@ -1,0 +1,10 @@
+{
+  "feature1": {
+    "product1": true,
+    "product2": false
+  },
+  "feature2": {
+    "product1": true,
+    "product2": false
+  }
+}

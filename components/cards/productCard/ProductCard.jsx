@@ -1,6 +1,7 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCheck } from '@fortawesome/free-solid-svg-icons'
+import { faCheck, faMinus } from '@fortawesome/free-solid-svg-icons'
 import CtaButton from '../../buttons/ctaButton';
+import generateAmazonImage from '../../../utils/generateAmazonImage';
 
 import './ProductCard.module.scss';
 
@@ -11,7 +12,7 @@ const renderBullets = (type, bullets) => {
         bullets.map((bullet) => {
           return (
             <li key={bullet} className={type === 'cons' ? 'cons' : 'pros'}>
-              <FontAwesomeIcon icon={faCheck} />
+              <FontAwesomeIcon icon={type === 'cons' ? faMinus : faCheck} />
               {bullet}
             </li>
           )
@@ -21,22 +22,39 @@ const renderBullets = (type, bullets) => {
   )
 };
 
-
 const ProductCard = ({ productCardData }) => {
   const {
     link,
     cons,
     pros,
-    img,
+    img: {
+      content: {
+        0: {
+          content: {
+            0: {
+              value
+            }
+          }
+        }
+      }
+    },
     title,
-    tag
-  } = productCardData;
+    tag,
+    imgIsAmazon
+  } = productCardData.fields;
 
   return (
     <div className="product-card-container">
-      <div className="badge">{tag}</div>
+      {tag && <div className="badge">{tag}</div>}
       <h1 className="product-title">{title}</h1>
-      <img src={img} />
+      <div className="product-image-container">
+        {imgIsAmazon ?
+          generateAmazonImage(value) :
+          <a href={link} target="_blank">
+            <img src={value} />
+          </a>
+        }
+      </div>
       <div className="bullets-container">
         <div className="pros-cons">
           <div className="pros-container">
@@ -53,7 +71,7 @@ const ProductCard = ({ productCardData }) => {
           size="medium"
           affiliateLink={link}
         >
-          Buy on Amazon
+          Check price
         </CtaButton>
       </div>
     </div>

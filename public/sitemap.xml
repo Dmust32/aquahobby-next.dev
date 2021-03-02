@@ -11,14 +11,6 @@
         </url><url>
           <loc>https://h2know.dev/freshwater-aquariums/freshwater-fish</loc>
         </url><url>
-          <loc>https://h2know.dev/saltwater-aquariums/coral</loc>
-        </url><url>
-          <loc>https://h2know.dev/saltwater-aquariums/directory</loc>
-        </url><url>
-          <loc>https://h2know.dev/saltwater-aquariums/saltwater-equipment</loc>
-        </url><url>
-          <loc>https://h2know.dev/saltwater-aquariums/saltwater-fish</loc>
-        </url><url>
           <loc>https://h2know.dev/tools/aquarium-volume-calculator</loc>
         </url><url>
           <loc>https://h2know.dev/tools/substrate-calculator</loc>
@@ -27,6 +19,8 @@
         </url>
     <url>
         <loc>https://h2know.dev/articles/article/beginners-guide-to-keeping-discus</loc>
+      </url><url>
+        <loc>https://h2know.dev/articles/productCompareArticle/7-best-aquarium-heaters-for-saltwater-or-freshwater-2021</loc>
       </url>      
     </urlset>
   
